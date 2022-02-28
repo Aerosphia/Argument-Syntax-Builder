@@ -1,11 +1,11 @@
 {
-  "name": "argumentsyntaxbuilder",
-  "version": "1.0.0",
-  "description": "A class for building syntax",
-  "main": "ArgumentSyntaxBuilder.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "argumentsyntaxbuilder",
+    "version": "1.0.0",
+    "description": "A class for building syntax",
+    "main": "class/ArgumentSyntaxBuilder.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
 }

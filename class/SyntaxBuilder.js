@@ -64,7 +64,8 @@ const SyntaxBuilder = new ArgumentSyntaxBuilder();
 
 const Syntax = SyntaxBuilder.makeRegular("SomeText")
     .makeRegular("SomeMoreText", { optional: true })
-    .makeChoice(["@user", "userId"], { optional: true })
+    .makeChoice(["Alpha", "Delta", "Jersey"], { optional: true, exactify: true, default: "Alpha" })
     .endBuild();
 
 console.log(Syntax);
+// <SomeText> <?SomeMoreText> <?"Alpha" | "Delta" | "Jersey" def = "Alpha">
