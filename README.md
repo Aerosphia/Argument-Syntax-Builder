@@ -1,2 +1,4 @@
 # ArgumentSyntaxBuilder
-A class for creating arguments
+A class for creating arguments in JavaScript & C#
+
+**This class is not finished.**
