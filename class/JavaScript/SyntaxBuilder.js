@@ -1,8 +1,3 @@
-/*
-    This is the JavaScript version of the library. There is also a C# verison.
-    This code is really messy. Just messing around for now. Library isn't finished.
-*/
-
 class ArgumentSyntaxBuilder {
     #build = "";
     #append(input) {
@@ -18,10 +13,17 @@ class ArgumentSyntaxBuilder {
             throw new Error("SyntaxBuilder::makeRegular: Not a string");
         }
 
+        const title = options?.title;
+        if (title && typeof title !== "string") {
+          throw new Error("SyntaxBuilder::makeRegular: Title not a string");
+        }
+
+        const inf = options?.inf;
+
         if (!options?.optional) {
-            this.#append(`<${input}>`);
+            this.#append(`<${title ? `${title}: ` : ""}${input}${inf ? "..." : ""}>`);
         } else {
-            this.#append(`<?${input}>`);
+            this.#append(`<?${title ? `${title}: ` : ""}${input}${inf ? "..." : ""}>`);
         }
 
         return this;
@@ -41,12 +43,18 @@ class ArgumentSyntaxBuilder {
             inputs = inputs.map((el) => `"${el}"`);
         }
 
+        const title = options?.title;
+        if (title && typeof title !== "string") {
+          throw new Error("SyntaxBuilder::makeRegular: Title not a string");
+        }
+
+        const inf = options?.inf;
         const splitString = inputs.join(" | ");
 
         if (!options?.optional) {
-            this.#append(`<${splitString}${def ? ` def = "${def}"` : ""}>`);
+            this.#append(`<${title ? `${title}: ` : ""}${splitString}${def ? ` def = "${def}"` : ""}${inf ? "..." : ""}>`);
         } else {
-            this.#append(`<?${splitString}${def ? ` def = "${def}"` : ""}>`);
+            this.#append(`<?${title ? `${title}: ` : ""}${splitString}${def ? ` def = "${def}"` : ""}${inf ? "..." : ""}>`);
         }
 
         return this;
@@ -64,11 +72,6 @@ class ArgumentSyntaxBuilder {
 }
 
 const SyntaxBuilder = new ArgumentSyntaxBuilder();
-
-const Syntax = SyntaxBuilder.makeRegular("SomeText")
-    .makeRegular("SomeMoreText", { optional: true })
-    .makeChoice(["Alpha", "Delta", "Jersey"], { optional: true, exactify: true, default: "Alpha" })
-    .endBuild();
-
-console.log(Syntax);
-// <SomeText> <?SomeMoreText> <?"Alpha" | "Delta" | "Jersey" def = "Alpha">
+const Command = ":eval";
+const Syntax = SyntaxBuilder.makeRegular("JavaScript").endBuild();
+console.log(Command + ` ${Syntax}`);
