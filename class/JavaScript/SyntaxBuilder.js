@@ -1,4 +1,7 @@
-// This code is really messy. Just messing around for now and improving gradually.
+/*
+    This is the JavaScript version of the library. There is also a C# verison.
+    This code is really messy. Just messing around for now. Library isn't finished.
+*/
 
 class ArgumentSyntaxBuilder {
     #build = "";
