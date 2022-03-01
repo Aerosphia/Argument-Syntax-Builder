@@ -1,4 +1,4 @@
-namespace CSVersion.SyntaxBuilder
+namespace CS.ArgumentSyntaxBuilder
 {
     public class ArgumentChoiceOptions
     {

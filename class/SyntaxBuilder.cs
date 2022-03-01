@@ -1,8 +1,7 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
-using CSVersion.SyntaxBuilder;
 
-namespace CSVersion.SyntaxBuilder
+namespace CS.ArgumentSyntaxBuilder
 {
     public class ArgumentSyntaxBuilder
     {

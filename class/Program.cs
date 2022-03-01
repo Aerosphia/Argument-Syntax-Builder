@@ -1,5 +1,5 @@
 using static System.Console;
-using CSVersion.SyntaxBuilder;
+using CS.ArgumentSyntaxBuilder;
 
 namespace Program
 {
@@ -15,7 +15,7 @@ namespace Program
                 .makeRegular("reason", new ArgumentRegularOptions { Optional = true, Infinite = true })
                 .endBuild();
 
-            Console.WriteLine(Syntax);
+            WriteLine(Syntax);
         }
     }
 }
