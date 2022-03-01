@@ -1,0 +1,15 @@
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\bin\Debug\net6.0\class.exe
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\bin\Debug\net6.0\class.deps.json
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\bin\Debug\net6.0\class.runtimeconfig.json
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\bin\Debug\net6.0\class.dll
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\bin\Debug\net6.0\ref\class.dll
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\bin\Debug\net6.0\class.pdb
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.csproj.AssemblyReference.cache
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.AssemblyInfoInputs.cache
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.AssemblyInfo.cs
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.csproj.CoreCompileInputs.cache
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.dll
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\ref\class.dll
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.pdb
+C:\Users\Jus46\ArgumentSyntaxBuilder\class\obj\Debug\net6.0\class.genruntimeconfig.cache

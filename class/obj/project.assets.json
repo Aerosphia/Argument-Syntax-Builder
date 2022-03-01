@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#.csproj",
-      "projectName": "C#",
-      "projectPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#.csproj",
+      "projectUniqueName": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\class.csproj",
+      "projectName": "class",
+      "projectPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\class.csproj",
       "packagesPath": "C:\\Users\\Jus46\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\obj\\",
       "projectStyle": "PackageReference",
