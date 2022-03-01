@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#\\C#.csproj",
+      "projectUniqueName": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#.csproj",
       "projectName": "C#",
-      "projectPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#\\C#.csproj",
+      "projectPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#.csproj",
       "packagesPath": "C:\\Users\\Jus46\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\C#\\obj\\",
+      "outputPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jus46\\AppData\\Roaming\\NuGet\\NuGet.Config"
