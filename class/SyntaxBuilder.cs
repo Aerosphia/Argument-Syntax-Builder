@@ -18,72 +18,72 @@ namespace CS.ArgumentSyntaxBuilder
             }
         }
 
-        public ArgumentSyntaxBuilder makeRegular(string Input, ArgumentRegularOptions options)
+        public ArgumentSyntaxBuilder MakeRegular(string Input, ArgumentRegularOptions Options)
         {
-            string title = options.Title;
-            bool titleExists = !String.IsNullOrEmpty(title);
+            string Title = Options.Title;
+            bool TitleExists = !String.IsNullOrEmpty(Title);
 
-            bool inf = options.Infinite;
-            bool opt = options.Optional;
+            bool Inf = Options.Infinite;
+            bool Opt = Options.Optional;
 
-            if (!opt)
+            if (!Opt)
             {
-                this._Append($"<{(titleExists ? $"{title}: " : "")}{Input}{(inf ? "..." : "")}>");
+                this._Append($"<{(TitleExists ? $"{Title}: " : "")}{Input}{(Inf ? "..." : "")}>");
             }
             else
             {
-                this._Append($"<?{(titleExists ? $"{title}: " : "")}{Input}{(inf ? "..." : "")}>");
+                this._Append($"<?{(TitleExists ? $"{Title}: " : "")}{Input}{(Inf ? "..." : "")}>");
             }
 
             return this;
         }
 
-        public ArgumentSyntaxBuilder makeChoice(string[] Inputs, ArgumentChoiceOptions options)
+        public ArgumentSyntaxBuilder MakeChoice(string[] Inputs, ArgumentChoiceOptions Options)
         {
-            string title = options.Title;
-            bool titleExists = !String.IsNullOrEmpty(title);
+            string Title = Options.Title;
+            bool TitleExists = !String.IsNullOrEmpty(Title);
 
-            string def = options.Default;
-            bool defExists = !String.IsNullOrEmpty(def);
+            string Def = Options.Default;
+            bool DefExists = !String.IsNullOrEmpty(Def);
 
-            bool inf = options.Infinite;
-            bool opt = options.Optional;
-            bool exactify = options.Exactify;
+            bool Inf = Options.Infinite;
+            bool Opt = Options.Optional;
+            bool Exactify = Options.Exactify;
 
-            if (defExists && Array.IndexOf(Inputs, def) == -1)
+            if (DefExists && Array.IndexOf(Inputs, Def) == -1)
             {
                 throw new ArgumentException("Default Input not found in array");
             }
 
-            if (exactify)
+            if (Exactify)
             {
                 Inputs = (Inputs.Select((el) => $"\"{el}\"")).ToArray();
             }
 
             string Joined = String.Join(" | ", Inputs);
 
-            if (!opt)
+            if (!Opt)
             {
-                this._Append($"<{(titleExists ? $"{title}: " : "")}{Joined}{(defExists ? $" def = \"{def}\"" : "")}{(inf ? "..." : "")}>");
+                this._Append($"<{(TitleExists ? $"{Title}: " : "")}{Joined}{(DefExists ? $" def = \"{Def}\"" : "")}{(Inf ? "..." : "")}>");
             }
             else
             {
-                this._Append($"<?{(titleExists ? $"{title}: " : "")}{Joined}{(defExists ? $" def = \"{def}\"" : "")}{(inf ? "..." : "")}>");
+                this._Append($"<?{(TitleExists ? $"{Title}: " : "")}{Joined}{(DefExists ? $" def = \"{Def}\"" : "")}{(Inf ? "..." : "")}>");
             }
 
             return this;
         }
 
-        public string endBuild()
+        public string EndBuild()
         {
             if (String.IsNullOrEmpty(this._Build))
             {
                 throw new InvalidOperationException("No build started");
             }
 
-            string oldBuild = this._Build;
+            string OldBuild = this._Build;
             this._Build = "";
-            return oldBuild;
+            return OldBuild;
         }
     }
 }

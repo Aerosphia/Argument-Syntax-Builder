@@ -8,12 +8,12 @@ namespace Program
         public static void Main()
         {
             ArgumentSyntaxBuilder SyntaxBuilder = new ArgumentSyntaxBuilder();
-            string[] dmUserChoices = { "yes", "no" };
+            string[] DMUserChoices = { "yes", "no" };
 
-            string Syntax = SyntaxBuilder.makeRegular("User", new ArgumentRegularOptions { })
-                .makeChoice(dmUserChoices, new ArgumentChoiceOptions { Optional = true, Exactify = true, Default = "yes" })
-                .makeRegular("reason", new ArgumentRegularOptions { Optional = true, Infinite = true })
-                .endBuild();
+            string Syntax = SyntaxBuilder.MakeRegular("User", new ArgumentRegularOptions { })
+                .MakeChoice(DMUserChoices, new ArgumentChoiceOptions { Optional = true, Exactify = true, Default = "yes" })
+                .MakeRegular("reason", new ArgumentRegularOptions { Optional = true, Infinite = true })
+                .EndBuild();
 
             WriteLine(Syntax);
         }
