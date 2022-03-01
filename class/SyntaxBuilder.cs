@@ -5,17 +5,16 @@ namespace CS.ArgumentSyntaxBuilder
 {
     public class ArgumentSyntaxBuilder
     {
-        // To be done later..
-        private string build = "";
+        private string _build = "";
         private void _append(string input)
         {
-            if (String.IsNullOrEmpty(this.build))
+            if (String.IsNullOrEmpty(this._build))
             {
-                this.build = input;
+                this._build = input;
             }
             else
             {
-                this.build = $"{this.build} {input}";
+                this._build = $"{this._build} {input}";
             }
         }
 
@@ -82,8 +81,8 @@ namespace CS.ArgumentSyntaxBuilder
                 throw new InvalidOperationException("No build started");
             }
 
-            string oldBuild = this.build;
-            this.build = "";
+            string oldBuild = this._build;
+            this._build = "";
             return oldBuild;
         }
     }
