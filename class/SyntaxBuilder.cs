@@ -23,16 +23,29 @@ namespace CS.ArgumentSyntaxBuilder
             string Title = Options.Title;
             bool TitleExists = !String.IsNullOrEmpty(Title);
 
+            string[]? Appensions = Options.Appensions;
+            string JoinedAppensions = "";
+
+            if (Appensions.Length != 0 && Array.Exists(Appensions, (el) => el.Length > 2))
+            {
+                throw new ArgumentException("Appensions cannot be more than 2 characters");
+            }
+            else if (Appensions.Length != 0)
+            {
+                JoinedAppensions = String.Join(",", (Appensions.Select((el) => el.ToLower())));
+            }
+
             bool Inf = Options.Infinite;
             bool Opt = Options.Optional;
+            bool AppensionsExist = !String.IsNullOrEmpty(JoinedAppensions);
 
             if (!Opt)
             {
-                this._Append($"<{(TitleExists ? $"{Title}: " : "")}{Input}{(Inf ? "..." : "")}>");
+                this._Append($"<{(TitleExists ? $"{Title}: " : "")}{Input}{(AppensionsExist ? $"[{JoinedAppensions}]" : "")}{(Inf ? "..." : "")}>");
             }
             else
             {
-                this._Append($"<?{(TitleExists ? $"{Title}: " : "")}{Input}{(Inf ? "..." : "")}>");
+                this._Append($"<?{(TitleExists ? $"{Title}: " : "")}{Input}{(AppensionsExist ? $"[{JoinedAppensions}]" : "")}{(Inf ? "..." : "")}>");
             }
 
             return this;
