@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\class.csproj": {}
+    "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\src\\class.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\class.csproj": {
+    "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\src\\class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\class.csproj",
+        "projectUniqueName": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\src\\class.csproj",
         "projectName": "class",
-        "projectPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\class.csproj",
+        "projectPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\src\\class.csproj",
         "packagesPath": "C:\\Users\\Jus46\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\class\\obj\\",
+        "outputPath": "C:\\Users\\Jus46\\ArgumentSyntaxBuilder\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jus46\\AppData\\Roaming\\NuGet\\NuGet.Config"
